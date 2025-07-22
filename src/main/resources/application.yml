@@ -8,7 +8,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true  # јвтоматическое обнаружение сервисов через Eureka
+          enabled: true
       routes:
         - id: user-service
           uri: lb://user-service
