@@ -23,6 +23,12 @@ spring:
           filters:
             - StripPrefix=1
 
+filters:
+  - name: CircuitBreaker
+    args:
+      name: userServiceCB
+      fallbackUri: forward:/fallback/user
+
 eureka:
   client:
     service-url:
