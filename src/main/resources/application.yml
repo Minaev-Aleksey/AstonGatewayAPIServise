@@ -15,13 +15,11 @@ spring:
           predicates:
             - Path=/api/users/**
           filters:
-            - StripPrefix=1  # Удаляет /api из URL
-        - id: notification-service
-          uri: lb://notification-service
-          predicates:
-            - Path=/api/notifications/**
-          filters:
             - StripPrefix=1
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/user-fallback
 
 filters:
   - name: CircuitBreaker
