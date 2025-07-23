@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>GatewayAPIService</artifactId>
+    <artifactId>gateway-api-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>GatewayAPIService</name>
     <description>Aston project for Spring Boot with Gateway API</description>
