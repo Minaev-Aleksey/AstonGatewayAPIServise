@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: optional:configserver:http://config-server:8888
+  application:
+    name: gateway-api-service
+  cloud:
+    config:
+      uri: http://config-server:8888
+      fail-fast: false
